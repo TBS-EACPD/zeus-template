@@ -1,0 +1,37 @@
+site_title:
+  en: TODO Zeus template
+  fr: TODO Zeus template
+
+unclassified:
+  en: Unclassified
+  fr: Non classifié
+
+other_lang:
+  en: Français
+  fr: English
+
+
+log_in:
+  en: Log in
+  fr: Se connecter
+
+logout:
+  en: "Logout"
+  fr: Fermeture de session
+
+please_login_to_see_page:
+  en: Please login to see this page.
+  fr: Veuillez  vous connectez pour accéder à cette page
+
+bad_user_name_and_password:
+  en: Your username and password didn't match. Please try again.
+  fr: Votre nom d'utilisateur et votre mot de passe ne correspondent pas. Veuillez essayer de nouveau.
+
+submit:
+  en: Submit
+  fr: Soumettre
+
+
+saved_successfully:
+  en: Saved successfully
+  fr: Sauvegardé avec succès

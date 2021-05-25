@@ -1,0 +1,41 @@
+[MESSAGES CONTROL]
+
+disable=
+  C0326, # exactly one space after comma
+  C0111, # docstrings for defs and classes
+  C0330, # wrong hanging indentation
+  C0301, # line too long 
+  W0311, # indentation
+  C0103, # constant UPPERCASE style convention
+  W0102, # Dangerous default value of {} for kwarg
+  C0303, # trailing whitespace
+  R0903, # too few public methods
+  R0913, # Too many arguments
+  R0914, # Too many local vars
+  R0901, # too many ancestors (max 7)
+  E0307, # __str__ does not return str (trigerred by django char/text field)
+
+[CLASSES]
+# pylint complains when you access 'protected' attributes (anything that starts with _), here are exceptions we support
+exclude-protected=
+  _meta, # even django docs encourage accessing _meta
+  _history_class,
+
+[TYPECHECK]
+generated-members=
+  objects,
+  _meta,
+  id,
+  [a-zA-Z]+_set,
+  ModelCreateForm,
+  ModelForm,
+  through,
+  belongs_to_filter,
+  prefetch_belongs_to_str,
+  _history_class
+
+
+
+ignored-argument-names=arg|args|kwargs|_*
+
+# note: for full list of configurable features, see http://pylint.pycqa.org/en/stable/technical_reference/features.html

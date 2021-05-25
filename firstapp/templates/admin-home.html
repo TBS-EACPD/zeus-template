@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load base_helpers %}
+
+
+{% block content %}
+<ul>
+  {% for dept in departments %}
+  <li>
+    <a href="{% url dept-home dept.pk %}">
+      {{dept.name}}
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

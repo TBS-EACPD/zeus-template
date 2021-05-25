@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load base_helpers %}
+
+{%block title%}{%tm "log_in"%}{%endblock%}
+
+{% block content %}
+<div style='min-height:750px'>
+  {% if form.errors %}
+  <div class="alert alert-danger" role="alert">
+    <p class='alert-header'>{%tm "bad_user_name_and_password"%}</p>
+  </div>
+  {% endif %}
+  
+  {% if next %}
+    <p> {%tm "please_login_to_see_page"%}</p>
+  {% endif %}
+  <div class='d-flex justify-content-center align-items-center' style='width:100%;min-height:400px'>
+    <div style='width: 40%; height: 30%'>
+     <form method="post" action="{{request.build_absolute_uri}}" autocomplete="off">
+       {% csrf_token %}
+       <div class="form-group row">
+         <label class='col-sm-4 col-form-label' for="{{form.username.id_for_label}}">
+           {{ form.username.label_tag }}
+         </label>
+         <div class='col-sm-8'>
+           <input class='form control' name='{{form.username.name}}' id='{{form.username.auto_id}}' type='text'/>
+         </div>
+       </div>
+       <div class="form-group row">
+         <label class='col-sm-4 col-form-label' for="{{form.password.id_for_label}}">
+           {{ form.password.label_tag }}
+         </label>
+         <div class='col-sm-8'>
+           <input class='form control' name='{{form.password.name}}' id='{{form.password.auto_id}}' type='password'/>
+         </div>
+       </div>
+       <div>
+         <input class='btn btn-success' type="submit" value="{% tm 'log_in' %}" />
+         <input type="hidden" name="next" value="{{ next }}" />
+       </div>
+     </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

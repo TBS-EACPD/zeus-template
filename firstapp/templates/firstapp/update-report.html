@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load base_helpers %}
+
+
+{% block content %}
+<form
+  method="POST" action="{{request.build_absolute_uri}}"
+>
+  {% csrf_token %}
+  {{form.as_table}}
+  <input
+    class="btn btn-success"
+    type="submit"
+    value="{% tm 'submit' %}"
+  >
+</form>
+{% endblock %}
