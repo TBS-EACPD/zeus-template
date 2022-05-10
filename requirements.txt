@@ -22,8 +22,8 @@ PyYAML==3.13
 jedi==0.17.2
 
 # zeus! 
-
-git+git://github.com/TBS-EACPD/zeus@master#egg=zeus # this tests the version on github in the @branch
+titan-zeus==1.2.0
+# git+git://github.com/TBS-EACPD/zeus@master#egg=zeus # this tests the version on github in the @branch
 
 # If developing zeus alongside your application, use one of the following lines
 # -e file:///${ZEUS_DIR} # this is 'editable mode', used to develop both repos simultaneously, changes are immediate. Good for development.
