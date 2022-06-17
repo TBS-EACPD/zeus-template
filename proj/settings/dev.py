@@ -61,7 +61,11 @@ if PRINT_ALL_DB_QUERIES:
     # warning: overwrites logging!
     LOGGING = {
         "version": 1,
-        "filters": {"require_debug_true": {"()": "django.utils.log.RequireDebugTrue",}},
+        "filters": {
+            "require_debug_true": {
+                "()": "django.utils.log.RequireDebugTrue",
+            }
+        },
         "handlers": {
             "console": {
                 "level": "DEBUG",
@@ -69,9 +73,13 @@ if PRINT_ALL_DB_QUERIES:
                 "class": "logging.StreamHandler",
             }
         },
-        "loggers": {"django.db.backends": {"level": "DEBUG", "handlers": ["console"],}},
+        "loggers": {
+            "django.db.backends": {
+                "level": "DEBUG",
+                "handlers": ["console"],
+            }
+        },
     }
 
 
 SECRET_KEY = "7guqoosqau&1ryk*(uwa^_&vm_2bqldv4wk2fdcljv9uh$!-#="
-

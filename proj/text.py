@@ -11,10 +11,10 @@ text_files = [
 
 def tdt(text, *args, **kwargs):
     """
-        To Do Text
+    To Do Text
 
-        Use this while prototyping to avoid spreading easily forgotten string accross the app
-        When you're finished, it's easy to search for all `tdt` instances
+    Use this while prototyping to avoid spreading easily forgotten string accross the app
+    When you're finished, it's easy to search for all `tdt` instances
     """
     return text
 

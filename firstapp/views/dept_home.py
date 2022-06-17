@@ -18,4 +18,3 @@ class DeptHome(TemplateView, LoginRequiredMixin):
     def get_context_data():
         dept = Department.objects.get(id=self.kwargs["dept_id"])
         return {"department": dept}
-

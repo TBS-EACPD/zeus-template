@@ -14,4 +14,3 @@ if config("USE_DEV_SETTINGS", cast=bool):
 else:
     print("---- using production settings ----")
     from .prod import *
-

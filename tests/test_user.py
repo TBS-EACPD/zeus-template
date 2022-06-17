@@ -7,4 +7,3 @@ def test_fixture_created_mits_user(client):
     assert user.check_password("123")
     assert user.is_active
     client.force_login(user)
-
