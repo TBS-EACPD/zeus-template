@@ -20,8 +20,8 @@ class DepartmentManager(models.Manager):
 
 class Department(models.Model):
     """
-        this class should ONLY contain fields that come from titan
-        extra fields should go in a 1-1 linked model, like department_profile
+    this class should ONLY contain fields that come from titan
+    extra fields should go in a 1-1 linked model, like department_profile
     """
 
     objects = DepartmentManager()
@@ -51,7 +51,7 @@ class Department(models.Model):
 
     def get_base_username(self):
         """
-            used to create usernames for organizations, e.g. rcmp-grc, pspc-spac, etc. 
+        used to create usernames for organizations, e.g. rcmp-grc, pspc-spac, etc.
         """
         username = None
 
@@ -79,4 +79,3 @@ class Department(models.Model):
         without_spaces = username.replace(" ", "").lower()
 
         return without_spaces
-

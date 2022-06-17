@@ -35,4 +35,3 @@ class DepartmentGroupProfile(models.Model):
         "auth.Group", null=False, related_name="dept_profile", on_delete=models.CASCADE
     )
     extra_field = models.TextField()
-

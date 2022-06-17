@@ -14,4 +14,3 @@ def test_fixture_created_mits_user(mits, mits_user, mits_client):
     assert r.versions.last().edited_by == mits_user
     assert r.versions.last().body == "body2"
     assert r.versions.last().title == "title2"
-

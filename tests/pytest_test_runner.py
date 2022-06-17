@@ -19,8 +19,8 @@ class PytestTestRunner:
     def run_tests(self, test_labels):
         """Run pytest and return the exitcode.
 
-    It translates some of Django's test command option to pytest's.
-    """
+        It translates some of Django's test command option to pytest's.
+        """
         import pytest
 
         argv = []

@@ -30,6 +30,8 @@ class CustomVersionModelWithEditor(CustomVersionModel):
         abstract = True
 
     edited_by = models.ForeignKey(
-        settings.AUTH_USER_MODEL, null=True, on_delete=models.SET_NULL, related_name="+",
+        settings.AUTH_USER_MODEL,
+        null=True,
+        on_delete=models.SET_NULL,
+        related_name="+",
     )
-

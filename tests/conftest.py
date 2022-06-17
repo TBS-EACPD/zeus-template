@@ -13,14 +13,14 @@ def enable_db_access_for_all_tests(db):
     """
     without this, tests (including old-style) have to explicitly declare db as a dependency
     https://pytest-django.readthedocs.io/en/latest/faq.html#how-can-i-give-database-access-to-all-my-tests-without-the-django-db-marker
-  """
+    """
     pass
 
 
 @pytest.fixture(scope="package")
 def _root_package_scoped_autofixture(django_db_setup, django_db_blocker):
     """
-        this is a mouthful, but this essentially applied 
+    this is a mouthful, but this essentially applied
     """
 
     with django_db_blocker.unblock():
